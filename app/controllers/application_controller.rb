@@ -3,8 +3,12 @@ class ApplicationController < ActionController::API
   include ExceptionHandler
 
   # called before every action on controllers
-  before_action :authorize_request
+  before_action :authorize_request, except: [:health_check]
   attr_reader :current_user
+
+  def health_check
+    render json: {ping: 'pong'}
+  end
 
   private
 
