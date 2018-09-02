@@ -23,6 +23,7 @@ test:
 
 production:
   <<: *default
+  host: 127.0.0.1
   database: vianhan1_app
   username: vianhan1_db_user
   password: <%= ENV['VIANHANI_DATABASE_PASSWORD'] %>
