@@ -23,7 +23,8 @@ test:
 
 production:
   <<: *default
-  socket: '/tmp/.s.PGSQL.5432'
   database: vianhan1_app
   username: vianhan1_db_user
   password: <%= ENV['VIANHANI_DATABASE_PASSWORD'] %>
+  host: 127.0.0.1
+  port: 5432
