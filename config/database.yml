@@ -23,6 +23,6 @@ test:
 
 production:
   <<: *default
-  database: vianhani_database
-  username: vianhani_access
+  database: vianhan1_app
+  username: vianhan1_db_user
   password: <%= ENV['VIANHANI_DATABASE_PASSWORD'] %>
